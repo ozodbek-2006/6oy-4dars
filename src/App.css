@@ -79,7 +79,7 @@ img {
   transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
+a:hover {
   color: #ff6464;
 }
 
