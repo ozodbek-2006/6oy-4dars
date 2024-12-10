@@ -11,20 +11,21 @@ function Navbar() {
             Home
           </Link>
         </li>
-        <li>
-          <Link
-            to="/work"
-            className={location.pathname === "/work" ? "active" : ""}
-          >
-            Works
-          </Link>
-        </li>
+
         <li>
           <Link
             to="/blog"
             className={location.pathname === "/blog" ? "active" : ""}
           >
             Blog
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/work"
+            className={location.pathname === "/work" ? "active" : ""}
+          >
+            Works
           </Link>
         </li>
       </ul>
