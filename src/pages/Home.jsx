@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
-export default function Home() {
+function Home() {
   return (
-    <div className="home">
+    <main>
       <section className="hero">
         <div className="hero-content">
           <h1>
@@ -15,13 +15,9 @@ export default function Home() {
             sint. Velit officia consequat duis enim velit mollit. Exercitation
             veniam consequat sunt nostrud amet.
           </p>
-          <Link to="/work" className="btn">
-            Check my work
-          </Link>
+          <button>Download Resume</button>
         </div>
-        <div className="hero-image">
-          <img src="/home1.png" alt="John Doe" />
-        </div>
+        <img src="/home1.png" alt="John's profile" className="hero-image" />
       </section>
 
       <section className="recent-posts">
@@ -29,19 +25,19 @@ export default function Home() {
           <h2>Recent posts</h2>
           <Link to="/blog">View all</Link>
         </div>
-        <div className="post-grid">
-          <div className="post-card">
+        <div className="posts-grid">
+          <div className="post">
             <h3>Making a design system from scratch</h3>
-            <p className="post-meta">12 Feb 2020 | Design, Pattern</p>
+            <p className="post-meta">12 Feb 2024 | Design, Pattern</p>
             <p>
               Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
               Exercitation veniam consequat sunt nostrud amet.
             </p>
           </div>
-          <div className="post-card">
+          <div className="post">
             <h3>Creating pixel perfect icons in Figma</h3>
-            <p className="post-meta">12 Feb 2020 | Figma, Icon Design</p>
+            <p className="post-meta">12 Feb 2024 | Figma, Icon Design</p>
             <p>
               Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
@@ -53,13 +49,13 @@ export default function Home() {
 
       <section className="featured-works">
         <h2>Featured works</h2>
-        <div className="work-list">
+        <div className="works-list">
           <div className="work-item">
             <img src="/home2.png" alt="Designing Dashboards" />
-            <div className="work-info">
+            <div className="work-content">
               <h3>Designing Dashboards</h3>
               <p className="work-meta">
-                <span className="year">2020</span>Dashboard
+                <span className="year">2024</span>Dashboard
               </p>
               <p>
                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do
@@ -69,11 +65,11 @@ export default function Home() {
             </div>
           </div>
           <div className="work-item">
-            <img src="/home3.png" alt="Vibrant Portraits of 2020" />
-            <div className="work-info">
-              <h3>Vibrant Portraits of 2020</h3>
+            <img src="/home3.png" alt="Vibrant Portraits of 2024" />
+            <div className="work-content">
+              <h3>Vibrant Portraits of 2024</h3>
               <p className="work-meta">
-                <span className="year">2018</span>Illustration
+                <span className="year">2024</span>Illustration
               </p>
               <p>
                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do
@@ -84,10 +80,10 @@ export default function Home() {
           </div>
           <div className="work-item">
             <img src="/home4.png" alt="36 Days of Malayalam type" />
-            <div className="work-info">
+            <div className="work-content">
               <h3>36 Days of Malayalam type</h3>
               <p className="work-meta">
-                <span className="year">2018</span>Typography
+                <span className="year">2024</span>Typography
               </p>
               <p>
                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do
@@ -98,6 +94,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }
+
+export default Home;

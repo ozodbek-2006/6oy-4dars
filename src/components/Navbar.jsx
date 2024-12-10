@@ -1,22 +1,14 @@
 import { Link, useLocation } from "react-router-dom";
 
-export default function Navbar() {
+function Navbar() {
   const location = useLocation();
 
   return (
-    <nav className="navbar">
-      <ul className="nav-links">
+    <nav>
+      <ul>
         <li>
           <Link to="/" className={location.pathname === "/" ? "active" : ""}>
             Home
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/blog"
-            className={location.pathname === "/blog" ? "active" : ""}
-          >
-            Blog
           </Link>
         </li>
         <li>
@@ -27,7 +19,17 @@ export default function Navbar() {
             Works
           </Link>
         </li>
+        <li>
+          <Link
+            to="/blog"
+            className={location.pathname === "/blog" ? "active" : ""}
+          >
+            Blog
+          </Link>
+        </li>
       </ul>
     </nav>
   );
 }
+
+export default Navbar;

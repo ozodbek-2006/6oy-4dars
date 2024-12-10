@@ -1,24 +1,25 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Blog from "./pages/Blog";
 import Work from "./pages/Work";
-import Footer from "./components/Footer";
+import "./App.css";
 
-export default function App() {
+function App() {
   return (
     <Router>
-      <div className="app">
+      <div className="container">
         <Navbar />
-        <main className="main-content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/work" element={<Work />} />
-          </Routes>
-        </main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/work" element={<Work />} />
+        </Routes>
         <Footer />
       </div>
     </Router>
   );
 }
+
+export default App;
